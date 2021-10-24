@@ -8,7 +8,7 @@ class MarketScreen extends Component{
     render(){
         return(
             <div>
-              MarketScreen
+              <h4> Coming Soon </h4>
             </div>
         )
     }

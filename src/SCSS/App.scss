@@ -188,3 +188,22 @@ body {
 .badge-secondary {
 	background-color: $bg-base;
 }
+
+.nav-tabs .nav-link,
+.nav-tabs {
+	border-bottom: none;
+}
+.nav-item {
+	cursor: pointer;
+}
+.nav-link {
+	border-bottom: none;
+	&:hover {
+		border-bottom: none;
+	}
+}
+
+.Tab--active {
+	position: relative;
+	background-color: $bg-dark;
+}
