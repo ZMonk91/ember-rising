@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import { Container } from "reactstrap";
+import CurrentHouse from "./CurrentHouse";
 
 class HomeScreen extends Component{
     constructor(props){
@@ -7,9 +9,10 @@ class HomeScreen extends Component{
 
     render(){
         return(
-            <div>
-              HomeScreen
-            </div>
+
+            <Container>
+             <CurrentHouse/>
+            </Container>
         )
     }
 }

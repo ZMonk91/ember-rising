@@ -18,6 +18,14 @@ body {
 	}
 }
 
+.ml-0 {
+	margin-left: 0 !important;
+}
+
+.pl-0 {
+	padding-left: 0 !important;
+}
+
 .Header {
 	background-color: $bg-dark;
 	svg:hover {
@@ -37,6 +45,7 @@ body {
 	border-left: 1px solid $secondary;
 	border-bottom: 1px solid$secondary;
 	height: calc(75vh - 56px);
+	padding-top: 1rem;
 }
 
 .Sidebar--col,
@@ -47,6 +56,45 @@ body {
 
 .Sidebar {
 	height: calc(100vh - 56px);
+	padding-top: 0.25rem;
+}
+
+.Sidebar--button {
+	text-align: end;
+	svg {
+		font-size: large;
+		cursor: pointer;
+	}
+}
+
+.Sidebar--hidden {
+	display: none;
+}
+
+.Sidebar--collapsed {
+	width: 4vw;
+	font-size: larger;
+	transition: 500ms linear;
+}
+
+.Sidebar--expanded {
+	width: 12vw;
+	transition: 250ms linear;
+}
+.Sidebar--button-right {
+	transform: RotateX(180deg);
+
+	margin-right: 1rem;
+	transition: 500ms ease;
+	transition-delay: 0;
+}
+
+.Sidebar--button-left {
+	transform: rotate(180deg);
+	text-align: center !important;
+	font-size: large;
+	transition: 500ms linear;
+	// padding-left: 0.5rem;
 }
 
 .active {
@@ -126,4 +174,17 @@ body {
 	&:first-child {
 		border-right: 1px groove $bg-dark;
 	}
+}
+
+.list-group {
+	background-color: $bg-dark;
+}
+
+.list-group-item {
+	color: $text-primary;
+	background-color: $bg-dark;
+}
+
+.badge-secondary {
+	background-color: $bg-base;
 }

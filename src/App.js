@@ -12,13 +12,11 @@ function App() {
 		<Router>
 			<Container fluid>
 				<Row>
-					<Header />
+					<Header/>
 				</Row>
 				<Row>
-					<Col sm={2} className="Sidebar--col">
-						<Sidebar />
-					</Col>
-					<Col>
+						<Sidebar/>
+					<Col className="pl-0">
 						<ScreenContainer />
 						<ChatContainer />
 					</Col>
