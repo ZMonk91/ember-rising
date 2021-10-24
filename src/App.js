@@ -1,5 +1,5 @@
 
-
+import { MemoryRouter as Router } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 
 import Header from './Components/Header/Header';
@@ -9,21 +9,23 @@ import ChatContainer from './Components/Chat/ChatContainer';
 
 function App() {
   return (
-    <Container fluid>
-      <Row>
-        <Header/>
-      </Row>
-      <Row>
-        <Col sm={2} className="Sidebar--col">
-          <Sidebar/>
-        </Col>
-        <Col>
-          <ScreenContainer/>
-          <ChatContainer/>
-        </Col>
-      </Row>
-    </Container>
-  );
+		<Router>
+			<Container fluid>
+				<Row>
+					<Header />
+				</Row>
+				<Row>
+					<Col sm={2} className="Sidebar--col">
+						<Sidebar />
+					</Col>
+					<Col>
+						<ScreenContainer />
+						<ChatContainer />
+					</Col>
+				</Row>
+			</Container>
+		</Router>
+	)
 }
 
 export default App;

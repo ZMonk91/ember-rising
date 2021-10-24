@@ -3,6 +3,7 @@ $bg-dark: rgb(28, 30, 33);
 $text-primary: white;
 $secondary: #61dafb;
 $tertiary: #ce3883;
+$ease-in-out: all 500ms cubic-bezier(0.22, 0, 0.58, 1); /* ease-in-out */
 body {
 	background-color: $bg-base !important;
 	color: white !important;
@@ -12,12 +13,18 @@ body {
 
 		&:hover {
 			background-color: $bg-dark;
+			transition: $ease-in-out;
 		}
 	}
 }
 
 .Header {
 	background-color: $bg-dark;
+	svg:hover {
+		color: $secondary;
+		cursor: pointer;
+		transition: $ease-in-out;
+	}
 }
 
 .navbar-toggler:hover {
@@ -42,6 +49,32 @@ body {
 	height: calc(100vh - 56px);
 }
 
+.active {
+	color: $tertiary !important;
+}
+
+.nav-item {
+	margin-left: 1rem;
+	font-size: larger;
+	&:hover {
+		background-color: $bg-dark;
+		-webkit-transition: 0.1s all ease-in-out;
+		-moz-transition: 0.1s all ease-in-out;
+		-o-transition: 0.1s all ease-in-out;
+		transition: 0.1s all ease-in-out;
+		svg {
+			font-size: larger;
+			color: $tertiary;
+			-webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+		}
+	}
+}
+.nav a {
+	text-decoration: none;
+}
 .ChatContainer {
 	height: calc(25vh - 56px);
 }
@@ -54,6 +87,10 @@ body {
 
 		&:hover {
 			background-color: $bg-dark;
+			-webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
 		}
 	}
 }

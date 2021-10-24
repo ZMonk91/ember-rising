@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import {Nav, NavItem} from "reactstrap"
-import {Link, NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import {
 	GiHouse,
 	GiBackpack,
@@ -12,56 +12,50 @@ import {
 import {RiSwordLine} from "react-icons/ri"
 import {GiProgression} from "react-icons/gi"
 class Sidebar extends Component {
-	constructor(props) {
-		super(props)
-	}
-
 	render() {
 		return (
 			<div className="Sidebar">
 				<Nav vertical color="faded" dark>
-					<NavItem>
-						<NavLink activeClassName="active" to="/">
+					<NavLink exact to="/">
+						<NavItem>
 							<GiHouse /> Home
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						{/* <Link to="/inventory"> */}
-						<NavLink activeClassName="active" to="/inventory">
+						</NavItem>
+					</NavLink>
+					<NavLink exact to="/inventory">
+						<NavItem>
 							<GiBackpack /> Inventory
-						</NavLink>
-						{/* </Link> */}
-					</NavItem>
-					{/* <NavItem>
-						<NavLink>
+						</NavItem>
+					</NavLink>
+					<NavLink to="/market">
+						<NavItem>
 							<GiScales /> Market
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
+						</NavItem>
+					</NavLink>
+					<NavLink to="/combat">
+						<NavItem>
 							<RiSwordLine /> Combat
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
+						</NavItem>
+					</NavLink>
+					<NavLink to="/skills">
+						<NavItem>
 							<GiProgression /> Skills
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
+						</NavItem>
+					</NavLink>
+					<NavLink to="/adventure">
+						<NavItem>
 							<GiTreasureMap /> Adventure
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
+						</NavItem>
+					</NavLink>
+					<NavLink to="/achievements">
+						<NavItem>
 							<GiTrophy /> Achievements
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
+						</NavItem>
+					</NavLink>
+					<NavLink to="/settings">
+						<NavItem>
 							<GiCog /> Settings
-						</NavLink>
-					</NavItem> */}
+						</NavItem>
+					</NavLink>
 				</Nav>
 			</div>
 		)
