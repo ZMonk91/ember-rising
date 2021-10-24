@@ -1,0 +1,92 @@
+$bg-base: #282c34;
+$bg-dark: rgb(28, 30, 33);
+$text-primary: white;
+$secondary: #61dafb;
+$tertiary: #ce3883;
+body {
+	background-color: $bg-base !important;
+	color: white !important;
+
+	a {
+		color: white !important;
+
+		&:hover {
+			background-color: $bg-dark;
+		}
+	}
+}
+
+.Header {
+	background-color: $bg-dark;
+}
+
+.navbar-toggler:hover {
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#008000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+	}
+}
+
+.ScreenContainer {
+	border-left: 1px solid $secondary;
+	border-bottom: 1px solid$secondary;
+	height: calc(75vh - 56px);
+}
+
+.Sidebar--col,
+.Sidebar {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.Sidebar {
+	height: calc(100vh - 56px);
+}
+
+.ChatContainer {
+	height: calc(25vh - 56px);
+}
+
+.ChatRoomButtons {
+	button {
+		margin-top: 1rem;
+		background-color: $bg-base;
+		border-radius: 0;
+
+		&:hover {
+			background-color: $bg-dark;
+		}
+	}
+}
+
+.ChatLog {
+	margin-top: 1rem;
+	background-color: $bg-dark;
+	height: 80%;
+}
+
+.ChatInput {
+	background-color: $bg-dark;
+	border-right: none;
+	border-color: white;
+	color: white !important;
+	&:focus {
+		background-color: $bg-dark;
+		border-color: white !important;
+		border-right: none;
+		box-shadow: none !important;
+	}
+}
+
+.ChatInputGroup {
+	border: 1px solid white;
+	border-left: none;
+	border-radius: 4px;
+}
+
+.ChatInputButton {
+	border: none;
+	border-radius: 0;
+	&:first-child {
+		border-right: 1px groove $bg-dark;
+	}
+}

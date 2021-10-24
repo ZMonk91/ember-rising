@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import { Col, Container, Row } from 'reactstrap';
+
+import Header from './Components/Header/Header';
+import Sidebar from './Components/Sidebar/Sidebar';
+import ScreenContainer from './Components/Screens/ScreenContainer'
+import ChatContainer from './Components/Chat/ChatContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid>
+      <Row>
+        <Header/>
+      </Row>
+      <Row>
+        <Col sm={2} className="Sidebar--col">
+          <Sidebar/>
+        </Col>
+        <Col>
+          <ScreenContainer/>
+          <ChatContainer/>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
