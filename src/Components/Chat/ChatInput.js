@@ -11,10 +11,11 @@ import {
 	Row
 } from "reactstrap"
 
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import {addMessage} from "../../features/chat/chatSlice"
 
 export function ChatInput() {
+	const username = useSelector(state => state.user.username)
 	const [value, setValue] = useState("")
 
 	const dispatch = useDispatch()
@@ -35,7 +36,7 @@ export function ChatInput() {
 		// const timeStamp = <div className="Chat--timestamp">[{timeString}]</div>
 		// const formattedMessage = {timeStamp}`Username : ${value}`
 		setValue("")
-		return <Row className="Chat--message-row"><div className="Chat--timestamp">[{timeString}]</div><div className="Chat--username">UserName: </div><div className="Chat--message">{value}</div></Row>
+		return <Row className="Chat--message-row"><div className="Chat--timestamp">[{timeString}]</div><div className="Chat--username">{username}: </div><div className="Chat--message">{value}</div></Row>
 	}
 
 	return (
