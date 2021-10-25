@@ -275,3 +275,39 @@ body {
 	text-align: center;
 	position: absolute;
 }
+
+.ActionCard {
+	// width: 10vw;
+	min-width: 8rem;
+	max-width: 13rem;
+	min-height: 8rem;
+	max-height: 13rem;
+	margin: 1rem;
+	display: inline-flex;
+	text-align: center;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.ActionCard--image {
+	aspect-ratio: 1;
+}
+
+.ActionCard--title {
+	position: absolute;
+	top: 0;
+	left: 20%;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.ActionCard--text {
+	position: absolute;
+	bottom: 2rem;
+}
+.ActionCard--button {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
