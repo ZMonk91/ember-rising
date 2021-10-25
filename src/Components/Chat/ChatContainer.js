@@ -6,9 +6,6 @@ import ChatRooms from "./ChatRooms";
 
 
 class ChatContainer extends Component{
-    constructor(props){
-        super(props)
-    }
 
     render(){
         return (

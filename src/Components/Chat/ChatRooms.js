@@ -2,9 +2,6 @@ import React, {Component} from "react";
 import { Button, ButtonGroup } from "reactstrap";
 
 class ChatRooms extends Component{
-    constructor(props){
-        super(props)
-    }
 
     render(){
         return (
