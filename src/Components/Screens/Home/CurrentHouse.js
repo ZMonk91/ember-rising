@@ -1,10 +1,14 @@
 import React, {Component} from "react"
-import {Badge, Card, CardBody, CardText, CardTitle, Col, ListGroup, ListGroupItem, ListGroupItemHeading, Row} from "reactstrap"
+import {
+	Badge,
+	Col,
+	ListGroup,
+	ListGroupItem,
+	ListGroupItemHeading,
+	Row
+} from "reactstrap"
 
 class CurrentHouse extends Component {
-	constructor(props) {
-		super(props)
-	}
 
 	render() {
 		return (

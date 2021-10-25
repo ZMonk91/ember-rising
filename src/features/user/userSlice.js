@@ -6,13 +6,11 @@ export const userSlice = createSlice({
         username: 'User',
         level: 1,
         totalLevel: 1,
-        woodcuttingLevel: 1,
         gold: 100,
         currHp: 20,
         maxHp: 20,
         currMp: 2,
-        maxMp: 2,
-        luck: 0
+        maxMp: 2
     },
     reducers: {
         changeUsername: (state, action) => {

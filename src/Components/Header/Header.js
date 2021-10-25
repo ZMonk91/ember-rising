@@ -1,15 +1,13 @@
-import React, {Component, useState} from "react"
+import React, {useState} from "react"
 import {
 	Navbar,
 	NavbarBrand,
-	NavbarToggler,
 	Collapse,
 	NavItem,
 	NavLink,
 	Nav,
 	Row,
 	Button,
-	ButtonGroup,
 	Col
 } from "reactstrap"
 import {VscThreeBars} from "react-icons/vsc"
