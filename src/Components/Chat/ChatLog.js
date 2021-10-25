@@ -1,18 +1,15 @@
-import React, {Component} from "react";
-import { Container } from "reactstrap";
+import React, {Component} from "react"
+import {Container} from "reactstrap"
+import {useSelector} from "react-redux"
 
-class ChatLog extends Component{
-    constructor(props){
-        super(props)
-    }
+export function ChatLog() {
+    const messages = useSelector(state => state.chat.messages)
 
-    render(){
-        return(
-            <Container className="ChatLog">
-              ChatLog
-            </Container>
-        )
-    }
+    const formattedMessages = () => messages.map(message => {
+        return <div>{message}</div>
+    })
+
+	return <Container className="ChatLog">{formattedMessages().reverse()}</Container>
 }
 
 export default ChatLog

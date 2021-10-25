@@ -1,5 +1,6 @@
 $bg-base: #282c34;
 $bg-dark: rgb(28, 30, 33);
+$bg-light: #606770;
 $text-primary: white;
 $secondary: #61dafb;
 $tertiary: #ce3883;
@@ -176,6 +177,26 @@ body {
 	}
 }
 
+.Chat--message-row {
+	width: 100%;
+}
+.Chat--timestamp,
+.Chat--username,
+.Chat--message {
+	font-size: small;
+	padding-left: 0.2rem;
+	padding-right: 0.1rem;
+	width: max-content;
+}
+.Chat--timestamp {
+	// width: 7%;
+	color: $bg-light;
+}
+
+.Chat--username {
+	font-weight: bold;
+}
+
 .list-group {
 	background-color: $bg-dark;
 }
@@ -206,4 +227,11 @@ body {
 .Tab--active {
 	position: relative;
 	background-color: $bg-dark;
+}
+
+.ChatLog {
+	height: 12vh;
+	display: flex;
+	flex-direction: column-reverse;
+	overflow-y: scroll;
 }
