@@ -1,35 +1,73 @@
 import React from "react"
-import { Card, CardBody, CardSubtitle, CardText, CardTitle, Progress } from "reactstrap"
-import { Link } from "react-router-dom"
+import {
+	Box,
+	Heading,
+	Progress,
+	Flex,
+	Center
+} from "@chakra-ui/react"
+import {Link} from "react-router-dom"
 
 export function SkillCard(props) {
-    props = props.props
+	props = props.props
 
-	const linkHandler = (link = null) =>{
-		if (link) {return link} else {return '/'}
+	const linkHandler = (link = null) => {
+		if (link) {
+			return link
+		} else {
+			return "/"
+		}
 	}
 
 	return (
-		<Card className="SkillCard">
+
+		<Box
+			rounded={{
+				md: "lg"
+			}}
+			shadow="base"
+			overflow="hidden"
+			maxW="10rem"
+			maxH="10rem"
+			m={1}
+			bg="#2c323d"
+		>
 		<Link to={linkHandler(props.link)}>
-			<span className="SkillCard--icon">
-				{props.icon()}
-			</span>
-			<CardTitle className="SkillCard--title" tag="h5">
-				{props.title}
-			</CardTitle>
-			<CardSubtitle tag="h6" className="mb-2 text-muted">
-				Level {props.level}
-			</CardSubtitle>
-			<CardBody className="SkillCard--body">
-				<CardText className="SkillCard--text">
-					<Progress multi>
-						<div className="SkillCard--progress-text">{props.xp}/{props.nextLevelXp}</div>
-						<Progress bar animated color="success" value="5"></Progress>
-					</Progress>
-				</CardText>
-			</CardBody>
-			</Link>
-		</Card>
+			<Flex
+				align="center"
+				justify="space-evenly"
+				px="6"
+				py="4"
+				borderBottomWidth="1px"
+				direction="column"
+				textAlign="center"
+			>
+				<Heading fontSize="lg">
+					<Center>{props.icon()}</Center>
+				</Heading>
+				<Heading fontSize="lg">
+					<Center>{props.title}</Center>
+				</Heading>
+			</Flex>
+			<Flex
+				as="dl"
+				direction={{
+					base: "column",
+					sm: "row"
+				}}
+				px="6"
+				py="4"
+			>
+				<Box as="dt" mr={2}>
+					Level
+				</Box>
+				<Box as="dd" flex="1" fontWeight="semibold">
+					{props.level}
+				</Box>
+				{props.xp}/{props.nextLevelXp}
+			</Flex>
+			<Progress value={1} />
+		</Link>
+		</Box>
 	)
 }

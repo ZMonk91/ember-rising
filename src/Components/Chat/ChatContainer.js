@@ -1,30 +1,31 @@
-import React, {Component} from "react";
-import { Col, Row } from "reactstrap";
-import ChatInput from "./ChatInput";
-import ChatLog from "./ChatLog";
-import ChatRooms from "./ChatRooms";
+import React from "react"
 
+import {Grid, GridItem} from "@chakra-ui/react"
 
-class ChatContainer extends Component{
+import {ChatInput} from "./ChatInput"
+import {ChatLog} from "./ChatLog"
+import {ChatRooms} from './ChatRooms'
 
-    render(){
-        return (
-					<Row className="ChatContainer">
-						<Col md={1}>
-							<ChatRooms />
-						</Col>
-						<Col>
-							<ChatLog />
-						</Col>
-						<Row>
-                        <Col md={1}/>
-							<Col>
-								<ChatInput />
-							</Col>
-						</Row>
-					</Row>
-				)
-    }
+export const ChatContainer = () => {
+	return (
+		<Grid
+			h='100%'
+			w='100%'
+			templateRows="repeat(12, 1fr)"
+			templateColumns="repeat(14, 1fr)"
+			gap={1}
+		>
+			<GridItem colSpan={1} rowSpan={12}>
+				<ChatRooms/>
+			</GridItem>
+			<GridItem colSpan={13} rowSpan={9}>
+				<ChatLog />
+			</GridItem>
+			<GridItem colSpan={13} rowSpan={3}>
+				<ChatInput />
+			</GridItem>
+		</Grid>
+	)
 }
 
 export default ChatContainer

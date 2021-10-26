@@ -1,27 +1,24 @@
 import React from "react"
-import {
-	Container
-} from "reactstrap"
+import {Flex} from "@chakra-ui/react"
 
 import {SkillCard} from "./SkillCard"
 import {CARDLIST} from "./SkillCardList"
 
-export function SkillsScreen() {
+export const SkillsScreen = () => {
 	const skillList = CARDLIST
 
-	const populateCards = (obj) => {
-		obj.map((skill) => {
-            console.log(skill)
-			return <SkillCard props={skill}></SkillCard>
-		})
-	}
+	// const populateCards = (obj) => {
+	// 	obj.map((skill) => {
+	//         console.log(skill)
+	// 		return <SkillCard props={skill}></SkillCard>
+	// 	})
+	// }
 
 	return (
-		<Container className="justify-content-between">
-			<h4>Skills</h4>
+		<Flex justify="space-evenly" height="100%" wrap="wrap">
 			{/* TODO: Cant get this to work for some reason */}
-			{populateCards(skillList)}
-			{/* <CardDeck className="SkillCard--deck"> */}
+			{/* {populateCards(skillList)} */}
+
 			<SkillCard props={skillList[0]} />
 			<SkillCard props={skillList[1]} />
 			<SkillCard props={skillList[2]} />
@@ -38,8 +35,7 @@ export function SkillsScreen() {
 			<SkillCard props={skillList[13]} />
 			<SkillCard props={skillList[14]} />
 			<SkillCard props={skillList[15]} />
-			{/* </CardDeck> */}
-		</Container>
+		</Flex>
 	)
 }
 

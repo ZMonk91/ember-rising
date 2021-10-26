@@ -1,28 +1,20 @@
+import * as React from 'react'
+import {ChakraProvider} from "@chakra-ui/react"
 
 import { MemoryRouter as Router } from 'react-router-dom';
-import { Col, Container, Row } from 'reactstrap';
+import { Navbar } from './Components/Navbar/Navbar';
 
-import Header from './Components/Header/Header';
-import Sidebar from './Components/Sidebar/Sidebar';
-import ScreenContainer from './Components/Screens/ScreenContainer'
-import ChatContainer from './Components/Chat/ChatContainer';
+import theme from './theme'
+import { Layout } from './Components/Screens/Layout';
 
 function App() {
   return (
-		<Router>
-			<Container fluid>
-				<Row>
-					<Header/>
-				</Row>
-				<Row>
-						<Sidebar/>
-					<Col className="pl-0">
-						<ScreenContainer />
-						<ChatContainer />
-					</Col>
-				</Row>
-			</Container>
-		</Router>
+		<ChakraProvider theme={theme}>
+			<Router>
+				<Navbar />
+				<Layout />
+			</Router>
+		</ChakraProvider>
 	)
 }
 

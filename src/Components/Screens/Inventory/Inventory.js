@@ -10,7 +10,7 @@ import {
 	TabPane
 } from "reactstrap"
 
-class InventoryScreen extends Component {
+class InventoryScreenOld extends Component {
 	constructor(props) {
 		super(props)
 		this.tabClick = this.tabClick.bind(this)
@@ -74,4 +74,4 @@ class InventoryScreen extends Component {
 	}
 }
 
-export default InventoryScreen
+export default InventoryScreenOld

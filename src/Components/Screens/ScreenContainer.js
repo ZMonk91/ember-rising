@@ -8,7 +8,7 @@ import InventoryScreen from "./Inventory/Inventory"
 import MarketScreen from "./Market/Market"
 import SettingsScreen from "./Settings/Settings"
 import SkillsScreen from "./Skills/Skills"
-import { WoodcuttingScreen } from "./Skills/Woodcutting/WoodcuttingScreen"
+import {WoodcuttingScreen} from "./Skills/Woodcutting/WoodcuttingScreen"
 
 class ScreenContainer extends Component {
 	render() {

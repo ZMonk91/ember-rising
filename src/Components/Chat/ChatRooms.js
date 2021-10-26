@@ -1,19 +1,27 @@
 import React, {Component} from "react";
-import { Button, ButtonGroup } from "reactstrap";
+import { Button, ButtonGroup,Flex } from "@chakra-ui/react";
+import { ChatRoomButton } from "./ChatRoomButton";
 
-class ChatRooms extends Component{
-
-    render(){
+export const ChatRooms = () => {
+	const RoomList = {
+		General: {
+			title: 'General',
+			channel: 'General'
+		},
+		Activity: {
+			title: 'Activity',
+			channel: 'Activity'
+		},
+		Trade: {
+			title: 'Trade',
+			channel: 'Trade'
+		}
+	}
         return (
-					<div>
-						<ButtonGroup vertical className='ChatRoomButtons'>
-							<Button>General</Button>
-							<Button>Activity</Button>
-							<Button>Trade</Button>
-						</ButtonGroup>
-					</div>
+					<Flex direction="column">
+						<ChatRoomButton room={RoomList.General} />
+						<ChatRoomButton room={RoomList.Activity} />
+						<ChatRoomButton room={RoomList.Trade} />
+					</Flex>
 				)
     }
-}
-
-export default ChatRooms

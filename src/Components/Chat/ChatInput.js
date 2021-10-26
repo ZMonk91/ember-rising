@@ -1,20 +1,27 @@
 import React, {useState} from "react"
 import {
-	Button,
+	Button as old4,
 	DropdownItem,
 	DropdownMenu,
 	DropdownToggle,
-	Input,
-	InputGroup,
-	InputGroupAddon,
-	Row
+	Input as old1,
+	InputGroup as old2,
+	InputGroupAddon as old3,
 } from "reactstrap"
+import {Box, Input, InputGroup, InputRightAddon, Button, ButtonGroup,  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuIcon} from '@chakra-ui/react'
 
 import {useDispatch, useSelector} from "react-redux"
 import {addMessage} from "../../features/chat/chatSlice"
 
 export function ChatInput() {
-	const username = useSelector(state => state.user.username)
+	const username = useSelector((state) => state.user.username)
 	const [value, setValue] = useState("")
 
 	const dispatch = useDispatch()
@@ -32,44 +39,34 @@ export function ChatInput() {
 	const formatMessage = () => {
 		const date = new Date()
 		const timeString = date.toLocaleTimeString()
-		// const timeStamp = <div className="Chat--timestamp">[{timeString}]</div>
-		// const formattedMessage = {timeStamp}`Username : ${value}`
 		setValue("")
-		return <Row className="Chat--message-row"><div className="Chat--timestamp">[{timeString}]</div><div className="Chat--username">{username}: </div><div className="Chat--message">{value}</div></Row>
+		return (
+			<Box display='flex' w='100%' fontSize='sm' pl='0.2'>
+				<Box width='max-content' color='GrayText'>[{timeString}]</Box>
+				<Box width='max-content' fontWeight='semibold'>{username}: </Box>
+				<Box width='max-content' ml={1}>{value}</Box>
+			</Box>
+
+		)
 	}
 
 	return (
 		<InputGroup>
 			<Input
-				className="ChatInput"
+				type="text"
 				placeholder="Enter a message..."
 				onChange={handleInput}
 				onKeyPress={handleKeypress}
 				value={value}
 			/>
-
-			<InputGroupAddon className="ChatInputGroup" addonType="append">
-				<DropdownToggle className="ChatInputButton" outline split caret>
-					{""}
-				</DropdownToggle>
-				<Button
-					type="submit"
-					className="ChatInputButton"
-					outline
-					onClick={() => {
-						dispatch(addMessage(formatMessage()))
-					}}
-				>
-					{" "}
-					Send
-				</Button>
-
-				<DropdownMenu>
-					<DropdownItem> ;) </DropdownItem>
-					<DropdownItem> :D </DropdownItem>
-					<DropdownItem> :p </DropdownItem>
-				</DropdownMenu>
-			</InputGroupAddon>
+			<InputRightAddon
+				children={"Enter"}
+				cursor="pointer"
+				type="submit"
+				onClick={() => {
+					dispatch(addMessage(formatMessage()))
+				}}
+			/>
 		</InputGroup>
 	)
 }
