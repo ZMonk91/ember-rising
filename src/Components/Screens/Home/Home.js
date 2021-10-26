@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Container } from "reactstrap";
+import {Container} from '@chakra-ui/react'
 import { CurrentHome } from "./CurrentHome";
 
 class HomeScreen extends Component{

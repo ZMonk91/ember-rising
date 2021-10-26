@@ -1,21 +1,6 @@
 import React, {useState} from "react"
-import {
-	Button as old4,
-	DropdownItem,
-	DropdownMenu,
-	DropdownToggle,
-	Input as old1,
-	InputGroup as old2,
-	InputGroupAddon as old3,
-} from "reactstrap"
-import {Box, Input, InputGroup, InputRightAddon, Button, ButtonGroup,  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon} from '@chakra-ui/react'
+
+import {Box, Input, InputGroup, InputRightAddon} from '@chakra-ui/react'
 
 import {useDispatch, useSelector} from "react-redux"
 import {addMessage} from "../../features/chat/chatSlice"

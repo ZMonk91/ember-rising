@@ -1,15 +1,15 @@
 import React, {useState} from "react"
 import {useSelector, useDispatch} from "react-redux"
+
 import {
-	Container,
-	Form,
-	FormGroup,
+	Box,
+	FormControl,
+	FormLabel,
 	Input,
+	FormHelperText,
 	InputGroup,
-	InputGroupAddon,
-	InputGroupText,
-	Label
-} from "reactstrap"
+	InputRightAddon
+} from "@chakra-ui/react"
 import {changeUsername} from "../../../features/user/userSlice"
 
 export function SettingsScreen() {
@@ -35,28 +35,26 @@ export function SettingsScreen() {
 		dispatch(changeUsername(name))
 	}
 	return (
-		<Container>
-			<Form onSubmit={handleFormSubmission}>
-				<FormGroup>
-					<Label for="username">Username</Label>
-					<InputGroup>
-						<Input
-							type="text"
-							name="username"
-							id="username"
-							placeholder={username}
-							onChange={handleUsernameChanges}
-							onKeyPress={handleKeypress}
-						></Input>
-						<InputGroupAddon type="append">
-							<InputGroupText type="submit" onClick={handleUsernameSubmission}>
-								Change
-							</InputGroupText>
-						</InputGroupAddon>
-					</InputGroup>
-				</FormGroup>
-			</Form>
-		</Container>
+		<Box>
+			<FormControl id="email">
+				<FormLabel>Change Username</FormLabel>
+				<InputGroup>
+					<Input
+						type="text"
+						w="25%"
+						placeholder={username}
+						onChange={handleUsernameChanges}
+						onKeyPress={handleKeypress}
+					/>
+					<InputRightAddon cursor="pointer" onClick={handleUsernameSubmission}>
+						Change
+					</InputRightAddon>
+				</InputGroup>
+				<FormHelperText>
+					You are only allowed this one time...Make sure you like it.
+				</FormHelperText>
+			</FormControl>
+		</Box>
 	)
 }
 

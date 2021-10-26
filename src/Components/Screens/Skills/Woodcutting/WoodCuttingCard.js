@@ -1,9 +1,5 @@
 import React from "react";
-import {  CardText, CardTitle } from "reactstrap";
-import {Flex, Text, Button, Box, Image, Grid, GridItem} from "@chakra-ui/react"
-import Card from '../../../Card/Card'
-import CardHeader from "../../../Card/CardHeader"
-import CardBody from "../../../Card/Card"
+import {Text, Button, Box, Grid, GridItem} from "@chakra-ui/react"
 import grassland_bg from './images/grassland_bg.jpeg'
 
 export function WoodcuttingCard(props){
