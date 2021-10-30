@@ -17,9 +17,9 @@ export function SettingsScreen() {
 	const [name, setName] = useState(username)
 	const dispatch = useDispatch()
 
-	const handleFormSubmission = (e) => {
-		e.preventDefault()
-	}
+	// const handleFormSubmission = (e) => {
+	// 	e.preventDefault()
+	// }
 
 	const handleUsernameChanges = (e) => {
 		setName(e.target.value)

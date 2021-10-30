@@ -10,9 +10,9 @@ import {
 	Icon,
 	Stat,
 	StatLabel,
-	StatNumber,
-	StatHelpText,
-	StatArrow
+	// StatNumber,
+	StatHelpText
+	// StatArrow
 } from "@chakra-ui/react"
 import {HiMinus} from 'react-icons/hi'
 

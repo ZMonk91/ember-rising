@@ -21,13 +21,13 @@ export function WoodcuttingCard(props) {
 			dispatch(addXp({skill, value}))
 		}, time)
 	}
-	const idleAction = (obj) => (dispatch) => {
-		// const {skill, time, value} = obj
-		console.log(obj)
-		setTimeout(() => {
-			dispatch(addXp({skill: obj.skill, value: obj.value}))
-		}, obj.time)
-	}
+	// const idleAction = (obj) => (dispatch) => {
+	// 	// const {skill, time, value} = obj
+	// 	console.log(obj)
+	// 	setTimeout(() => {
+	// 		dispatch(addXp({skill: obj.skill, value: obj.value}))
+	// 	}, obj.time)
+	// }
 
 	const handleAction = () => {
 		if (xp >= skills.woodcutting.nextLevel) {

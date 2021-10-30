@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import { Button, ButtonGroup,Flex } from "@chakra-ui/react";
+import React from "react";
+import { Flex } from "@chakra-ui/react";
 import { ChatRoomButton } from "./ChatRoomButton";
 
 export const ChatRooms = () => {

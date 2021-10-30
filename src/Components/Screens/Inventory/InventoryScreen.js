@@ -9,10 +9,10 @@ import {
 	TabPanels,
 	Tab,
 	TabPanel,
-	Button,
-	Slider,
-	Center,
-	SliderTrack
+	// Button,
+	// Slider,
+	// Center,
+	// SliderTrack
 } from "@chakra-ui/react"
 import {Item} from "./Item"
 import { EquipmentScreen } from "./EquipmentScreen"
