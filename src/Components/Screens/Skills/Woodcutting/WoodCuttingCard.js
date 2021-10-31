@@ -30,7 +30,7 @@ export function WoodcuttingCard(props) {
 	// }
 
 	const handleAction = () => {
-		if (xp >= skills.woodcutting.nextLevel) {
+		if (xp >= (skills.woodcutting.nextLevel - 5)) {
 			dispatch(addLevel({skill: "woodcutting"}))
 			dispatch(updateNextLevel({skill: "woodcutting"}))
 		}

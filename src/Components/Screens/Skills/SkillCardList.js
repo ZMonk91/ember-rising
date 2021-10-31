@@ -1,4 +1,3 @@
-
 import {
 	GiWoodAxe,
 	GiFishingHook,
@@ -19,7 +18,14 @@ import {
 } from "react-icons/gi"
 
 export const CARDLIST = [
-	{title: "Woodcutting", level: 1, icon: GiWoodAxe, xp: 0, nextLevelXp: 100, link: '/woodcutting'},
+	{
+		title: "Woodcutting",
+		level: 1,
+		icon: GiWoodAxe,
+		xp: 0,
+		nextLevelXp: 100,
+		link: "/woodcutting"
+	},
 	{title: "Fishing", level: 1, icon: GiFishingHook, xp: 0, nextLevelXp: 100},
 	{title: "Mining", level: 1, icon: GiMining, xp: 0, nextLevelXp: 100},
 	{title: "Farming", level: 1, icon: GiRake, xp: 0, nextLevelXp: 100},
