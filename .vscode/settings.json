@@ -4,9 +4,11 @@
 		"chakra",
 		"Chakra",
 		"reduxjs",
+		"semibold",
 		"SIDEBARITEMS",
 		"Smithing",
-		"Triorb"
+		"Triorb",
+		"unstyled"
 	],
 	"cSpell.ignoreWords": ["Raleway"]
 }

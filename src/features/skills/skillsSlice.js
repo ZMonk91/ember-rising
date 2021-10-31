@@ -18,6 +18,8 @@ import {
 	// GiClover
 } from "react-icons/gi"
 
+
+
 export const skillsSlice = createSlice({
 	name: "skills",
 	initialState: {
@@ -43,7 +45,7 @@ export const skillsSlice = createSlice({
 		}
 	},
 	reducers: {
-		getSkilllevel: (state, action) => {
+		getSkillLevel: (state, action) => {
 			return state[action.payload.skill].level
 		},
 		addXp: (state, action) => {
