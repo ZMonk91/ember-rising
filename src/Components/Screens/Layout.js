@@ -1,7 +1,7 @@
 import React from "react"
-import {Grid, GridItem, Center} from "@chakra-ui/react"
+import {Grid, GridItem} from "@chakra-ui/react"
 import {SidenavContainer} from "../Sidenav/SidenavContainer"
-import { GameScreenContainer } from "./GameScreenContainer"
+import {GameScreenContainer} from "./GameScreenContainer"
 import ChatContainer from "../Chat/ChatContainer"
 
 export const Layout = () => {
@@ -15,17 +15,28 @@ export const Layout = () => {
 			templateRows="repeat(12, 1fr)"
 			templateColumns="repeat(24,1fr)"
 			gap={3}
+			width="100%"
 		>
-			<GridItem colSpan={isOpen ? 2 : 1} rowSpan={12}>
-				<Center>
-					<SidenavContainer isOpen={isOpen} toggle={toggle} />
-				</Center>
+			<GridItem
+				colSpan={isOpen ? 2 : 1}
+				rowSpan={12}
+				width="100%"
+				ml={2}
+				borderRight="0px"
+			>
+				<SidenavContainer isOpen={isOpen} toggle={toggle} />
 			</GridItem>
-			<GridItem colSpan={isOpen ? 22 : 23} rowSpan={8} borderLeft="1px" borderBottom="1px" borderBottomLeftRadius="5px">
-				<GameScreenContainer/>
+			<GridItem
+				colSpan={isOpen ? 22 : 23}
+				rowSpan={8}
+				// borderLeft="1px"
+				borderBottom="1px"
+				borderBottomLeftRadius="0px"
+			>
+				<GameScreenContainer />
 			</GridItem>
 			<GridItem colSpan={isOpen ? 22 : 23} rowSpan={4}>
-				<ChatContainer/>
+				<ChatContainer />
 			</GridItem>
 		</Grid>
 	)

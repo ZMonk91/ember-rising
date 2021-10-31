@@ -10,6 +10,7 @@ import SettingsScreen from "../Components/Screens/Settings/Settings"
 import SkillsScreen from "../Components/Screens/Skills/Skills"
 import {WoodcuttingScreen} from "../Components/Screens/Skills/Woodcutting/WoodcuttingScreen"
 
+
 export const GameRoutes = () => {
 	return (
 		<Routes>
