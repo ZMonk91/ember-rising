@@ -14,7 +14,7 @@ export const Layout = () => {
 			h="90vh"
 			templateRows="repeat(12, 1fr)"
 			templateColumns="repeat(24,1fr)"
-			gap={3}
+			gap={4}
 			width="100%"
 		>
 			<GridItem
@@ -22,7 +22,6 @@ export const Layout = () => {
 				rowSpan={12}
 				width="100%"
 				ml={2}
-				borderRight="0px"
 			>
 				<SidenavContainer isOpen={isOpen} toggle={toggle} />
 			</GridItem>

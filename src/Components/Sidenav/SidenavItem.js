@@ -22,7 +22,7 @@ export const SidenavItem = ({isOpen, ...props}) => {
 							display={isOpen ? "contents" : "none"}
 							fontSize={"sm"}
 							fontWeight="light"
-							mt={2}
+							// mt={2}
 						>
 							{isOpen && props.name}
 						</Box>
